@@ -2,26 +2,44 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## App-Setup
 
-## Code scaffolding
+bootstrap Login: https://bootsnipp.com/snippets/GaZG0
+ng new <AppName> --style=scss --routing
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Ng-Bootstrap Verstion List
+https://www.npmjs.com/package/@ng-bootstrap/ng-bootstrap
 
-## Build
+## Install BootStrap / Ng-BootStrap
+Step1: ng new [AppName] --style=scss --routing --prefix myprefix
+Step2: npm install --save @ng-bootstrap/ng-bootstrap@4.2.1 [specific version for Angular 7]
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-## Running unit tests
+@NgModule({
+  ...
+  imports: [NgbModule, ...],
+  ...
+})
+export class YourAppModule {
+}
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Step1: npm install bootstrap --save
+Step2: Open angular.json
+"styles": [
+  "src/styles.scss",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css"
+],
 
-## Running end-to-end tests
+---------------- [or] ---------------------
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Step3: npm install bootstrap --save Step4: Open angular.json "styles": [ "src/styles.scss", "node_modules/bootstrap/dist/css/bootstrap.min.css" ], ----- [or] -------
 
-## Further help
+There are many ways to do that. The simpest method is by using the [src/styles.css]file and adding the following code: URL: https://www.techiediaries.com/angular-bootstrap-ui/ @import "~bootstrap/dist/css/bootstrap.css";
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## @input
+
+![001-input-output](https://user-images.githubusercontent.com/30646609/62789135-f27bfd80-bae5-11e9-9f2e-0eac76e453f9.JPG)
+![002-input-output](https://user-images.githubusercontent.com/30646609/62789136-f27bfd80-bae5-11e9-934b-011388cb97fb.JPG)
