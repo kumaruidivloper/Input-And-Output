@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,10 @@ export class AppComponent {
   // if isFavorite is false yellow background
   // if isFavorite is true blue background
   isFavorite: true
+ }
+
+ changBgColor() {
+    this.post.isFavorite = !this.post.isFavorite
  }
 
 
