@@ -1,15 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container mt-3">
-    <div *ngIf="courses.length > 0; then CoursesList else noCourses">
-      
-    </div>
-    <ng-template #CoursesList>
-        <h1>List of courses</h1>
+    <div [hidden]="courses.length === 0">
+      <h1>List of courses</h1>
       <ul>
         <li *ngFor="let course of courses">{{course}}</li>
       </ul>
-    </ng-template>
-    <ng-template #noCourses>
-      <h1>No courses yet</h1>
-    </ng-template>
+    </div>
+    <div [hidden]="courses.length > 0">
+        <h1>No courses yet</h1>
+      </div>
 </div>
