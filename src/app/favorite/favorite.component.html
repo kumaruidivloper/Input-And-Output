@@ -1,8 +1,9 @@
 <p>App-favorite Component</p> 
-<p (click)="bgChange()" 
+<p (click)="bgChange()"
+   style="cursor: pointer"
    [style.backgroundColor]="isFavorite ? 'blue' : 'Yellow'"
    [style.color]="isFavorite ? 'white' : 'black'"
-   [style.padding]="isFavorite ? '10px' : '15px'"
+   [style.padding]="isFavorite ? '10px' : '10px'"
    [class.border-R] = "isBorder">
   Please Click Me to change Background color! [app-favorite] component
 </p>
