@@ -15,7 +15,7 @@ export class FavoriteComponent implements OnInit {
   bgChange() {
     this.isFavorite = !this.isFavorite;
     this.isBorder = !this.isBorder;
-    this.change.emit(this.isFavorite);
+    this.change.emit({newValue: this.isFavorite});
   }
   ngOnInit() {
   }

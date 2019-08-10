@@ -20,8 +20,8 @@ export class AppComponent {
     this.post.isFavorite = !this.post.isFavorite
  }
 
- onFavoriteChanged(isDisable) {
-   console.log('Favorite changed: ', isDisable);
+ onFavoriteChanged(eventsArgs) {
+   console.log('Favorite changed: ', eventsArgs);
    this.post.isDisable = !this.post.isDisable
  }
 
