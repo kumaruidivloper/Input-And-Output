@@ -1,6 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-  <app-favorite [isFavorite]="post.isFavorite">
-
-  </app-favorite>  
+<div class="container mt-3">
+    <div *ngIf="courses.length > 0">
+      <h1>List of courses</h1>
+    </div>
+    <div *ngIf="courses.length === 0">
+      <h1>No courses yet</h1>
+    </div>
 </div>

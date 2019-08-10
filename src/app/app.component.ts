@@ -6,13 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
- post = {
-  title: 'Input-And-Output',
-
-  // if isFavorite is false yellow background
-  // if isFavorite is true blue background
-  isFavorite: true
- }
-
-
+    courses = [1,2]
 }
