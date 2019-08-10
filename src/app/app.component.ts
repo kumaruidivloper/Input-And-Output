@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { FavoriteChangedEventArgs } from './favorite/favorite.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,7 @@ export class AppComponent {
     this.post.isFavorite = !this.post.isFavorite
  }
 
- onFavoriteChanged(eventsArgs) {
+ onFavoriteChanged(eventsArgs: FavoriteChangedEventArgs) {
    console.log('Favorite changed: ', eventsArgs);
    this.post.isDisable = !this.post.isDisable
  }
