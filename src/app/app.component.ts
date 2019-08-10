@@ -12,11 +12,17 @@ export class AppComponent {
 
   // if isFavorite is false yellow background
   // if isFavorite is true blue background
-  isFavorite: true
+  isFavorite: true,
+  isDisable: true
  }
 
  changBgColor() {
     this.post.isFavorite = !this.post.isFavorite
+ }
+
+ onFavoriteChanged() {
+   console.log('Favorite changed');
+   this.post.isDisable = !this.post.isDisable
  }
 
 

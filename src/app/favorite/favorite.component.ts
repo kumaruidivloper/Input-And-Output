@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-favorite',
@@ -8,12 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FavoriteComponent implements OnInit {
   // [is-favorite] Aliasing Input name
   @Input('is-favorite') isFavorite: boolean;
+  @Output() change = new EventEmitter();
   public isBorder = true;
   constructor() { }
 
   bgChange() {
     this.isFavorite = !this.isFavorite;
     this.isBorder = !this.isBorder;
+    this.change.emit();
   }
   ngOnInit() {
   }
