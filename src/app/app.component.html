@@ -1,9 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container mt-3">
   <!-- // [is-favorite] Aliasing Input name we can give here app will not broken -->
-  <app-favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChange()">
-
-  </app-favorite>  
-  <h6>Click the button to change the favorite works! Background Color</h6>
-  <button class="btn btn-primary" (click)="changBgColor()">Click Me</button>
+  <div style="border: solid 3px #769456; padding:10px; border-radius: 10px" class="mb-3">
+      <app-favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChange()"></app-favorite>
+  </div>
+  <div style="border: solid 3px #456; padding:10px; border-radius: 10px">
+    <p>AppComponent</p> 
+    <h6>Click the button to change the favorite works! Background Color</h6>
+    <button class="btn btn-primary" (click)="changBgColor()">Click Me</button>
+  </div>
 </div>
