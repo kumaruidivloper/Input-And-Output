@@ -2,7 +2,7 @@
 <div class="container mt-3">
   <!-- // [is-favorite] Aliasing Input name we can give here app will not broken -->
   <div style="border: solid 3px #769456; padding:10px; border-radius: 10px" class="mb-3">
-      <app-favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged()"></app-favorite>
+      <app-favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite>
   </div>
   <div style="border: solid 3px #456; padding:10px; border-radius: 10px">
     <p>AppComponent</p> 
