@@ -1,9 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container mt-3">
-    <ng-template [ngIf]="courses.length > 0">
-      <h1>List of Courses</h1>
-    </ng-template>
-    <ng-template [ngIf]="!(courses.length > 0)">
-        <h1>No courses</h1>
-      </ng-template>
+   <div class="box-size" [ngClass]="{
+     'border-style': borderStyle,
+     'backGround-Color-circle': borderIsSelected
+   }" (click)="onClick()">
+
+   </div>
 </div>

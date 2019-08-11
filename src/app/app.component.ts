@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  courses = ['course-1', 'course-2', 'course-3', 'course-4']
+  public borderIsSelected:boolean = true;
+  public borderStyle:boolean = false;
+
+  onClick(){
+    this.borderIsSelected = !this.borderIsSelected;
+    this.borderStyle = !this.borderStyle
+  }
 }
