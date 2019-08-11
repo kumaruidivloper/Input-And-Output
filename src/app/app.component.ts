@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    courses = ['courses-1', 'courses-2', 'courses-3', 'courses-4']
+    viewMode = 'someTingElse';
 
 }

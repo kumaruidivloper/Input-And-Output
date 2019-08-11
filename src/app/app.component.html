@@ -1,12 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container mt-3">
-    <div [hidden]="courses.length === 0">
-      <h1>List of courses</h1>
-      <ul>
-        <li *ngFor="let course of courses">{{course}}</li>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a [class.active]="viewMode === 'map'" class="nav-link" (click)="viewMode='map'">Map View</a>
+        </li>
+        <li class="nav-item">
+          <a [class.active]="viewMode === 'list'" class="nav-link" (click)="viewMode='list'">List View</a>
+        </li>
       </ul>
+    <div [ngSwitch]="viewMode">
+      <div *ngSwitchCase="'map'">Map View Content</div>
+      <div *ngSwitchCase="'list'">List View Content</div>
+      <div *ngSwitchDefault>Otherwise</div>
     </div>
-    <div [hidden]="courses.length > 0">
-        <h1>No courses yet</h1>
-      </div>
 </div>
