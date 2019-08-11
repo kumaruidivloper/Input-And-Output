@@ -1,9 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container mt-3">
-   <button type="button" [ngStyle]="{
-     'backgroundColor': canSave ? 'blue' : 'gray',
-     'color': canSave ? 'white' : 'black'
-   }" (click)="onClick()"> Click Me
-
-  </button>
+  <h3>Type-1</h3>
+   <h6>{{ task.assignee?.name }}</h6>
+   <h3>Type-2</h3>
+   <h6 *ngIf="task.assignee">{{ task.assignee.name }}</h6>
+    <br>
+    <br>
+   <h3>Type-3</h3>
+   <h6>{{ taskTwo.assignee?.name }}</h6>
+   <h3>Type-4</h3>
+   <h6 *ngIf="taskTwo.assignee">{{ taskTwo.assignee.name }}</h6>
 </div>
+

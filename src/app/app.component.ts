@@ -6,10 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  canSave = true;
-
-  onClick() {
-    this.canSave = !this.canSave;
+  task = {
+    title: 'Review application',
+    assignee: null
   }
 
+  taskTwo = {
+    title: 'Review application',
+    assignee: {
+      name: 'Kumar'
+    }
+  }
 }
