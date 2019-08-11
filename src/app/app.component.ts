@@ -6,18 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public courses;
-
-
-   loadCourses() {
-    this.courses = [
-      { id: 1, name: 'course1' },
-      { id: 2, name: 'course2' },
-      { id: 3, name: 'course3' }
-    ];
-   }
-
-   trackCourse(index, course) {
-      return course ? course.id : undefined;
-   }
+  courses = ['course-1', 'course-2', 'course-3', 'course-4']
 }

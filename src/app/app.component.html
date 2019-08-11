@@ -1,7 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container mt-3">
-    <button class="btn btn-primary" (click)="loadCourses()">Load Courses</button>
-    <ul>
-      <li *ngFor="let course of courses; trackBy: trackCourse">{{course.name}}</li>
-    </ul>
+    <ng-template [ngIf]="courses.length > 0">
+      <h1>List of Courses</h1>
+    </ng-template>
+    <ng-template [ngIf]="!(courses.length > 0)">
+        <h1>No courses</h1>
+      </ng-template>
 </div>
