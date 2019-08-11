@@ -1,8 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container mt-3">
-    <button class="btn btn-primary" (click)="onAdd()">Add</button>
-    <li *ngFor="let course of courses; index as i" class="mb-3">
-        {{ i }} - {{ course.name}} {{course.id}}
-        <button class="btn btn-danger" (click)="onRemove(course)">Remove</button>
-    </li>
+    <button class="btn btn-primary" (click)="loadCourses()">Load Courses</button>
+    <ul>
+      <li *ngFor="let course of courses; trackBy: trackCourse">{{course.name}}</li>
+    </ul>
 </div>

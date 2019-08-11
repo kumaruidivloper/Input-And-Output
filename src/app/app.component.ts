@@ -6,21 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public nameNumber: number = 3;
-   courses = [
-     { id: 1, name: 'course1' },
-     { id: 2, name: 'course2' },
-     { id: 3, name: 'course3' }
-   ];
+  public courses;
 
-   onAdd() {
-     this.nameNumber++;
-     console.log(this.nameNumber);
-     this.courses.push({ id: + this.nameNumber, name: 'course'+this.nameNumber  })
+
+   loadCourses() {
+    this.courses = [
+      { id: 1, name: 'course1' },
+      { id: 2, name: 'course2' },
+      { id: 3, name: 'course3' }
+    ];
    }
 
-   onRemove(course) {
-    let index = this.courses.indexOf(course);
-    this.courses.splice(index, 1)
+   trackCourse(index, course) {
+      return course ? course.id : undefined;
    }
 }
