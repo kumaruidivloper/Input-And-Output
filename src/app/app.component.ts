@@ -6,11 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public borderIsSelected:boolean = true;
-  public borderStyle:boolean = false;
+  canSave = true;
 
-  onClick(){
-    this.borderIsSelected = !this.borderIsSelected;
-    this.borderStyle = !this.borderStyle
+  onClick() {
+    this.canSave = !this.canSave;
   }
+
 }

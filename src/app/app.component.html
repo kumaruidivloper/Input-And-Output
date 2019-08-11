@@ -1,9 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container mt-3">
-   <div class="box-size" [ngClass]="{
-     'border-style': borderStyle,
-     'backGround-Color-circle': borderIsSelected
-   }" (click)="onClick()">
+   <button type="button" [ngStyle]="{
+     'backgroundColor': canSave ? 'blue' : 'gray',
+     'color': canSave ? 'white' : 'black'
+   }" (click)="onClick()"> Click Me
 
-   </div>
+  </button>
 </div>
