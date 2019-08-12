@@ -11,7 +11,14 @@
     <!--label+input[type='text'].form-control   //Short for create below Element for HTML-->
     <div class="form-group">
         <label for="firstName">First Name</label>
-        <input ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
+        <input required ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
+
+        <!--Error Message Div Below-->
+        <!--touched [prop] only user touch the form then only display the error-->
+        <!--if u not include touched by default form display the error message-->
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+          First Name is required.
+        </div>
     </div>
 
     <!--div.form-group>label[for="comment"]+textarea[id='comment'].form-control    //Short for create below Element for HTML-->
