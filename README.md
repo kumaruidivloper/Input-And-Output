@@ -4,6 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Angular Template-Driven Form Creation
 
+## NgModel & ngModelGroup
+![006-NgModel ngModelGroup](https://user-images.githubusercontent.com/30646609/62854163-1fa9f500-bd0c-11e9-8e80-695b7151b094.JPG)
+
+## FormControl Vs FormGroup
+![007-FormControl-Vs-FormGroup](https://user-images.githubusercontent.com/30646609/62854162-1f115e80-bd0c-11e9-9ada-5a6e44f189b7.JPG)
+
 ## FormControl
 ![001-FormControl](https://user-images.githubusercontent.com/30646609/62849472-5d535180-bcfd-11e9-8553-04798965cb2a.JPG)
 
