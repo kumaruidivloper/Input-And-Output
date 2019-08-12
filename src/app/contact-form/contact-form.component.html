@@ -58,8 +58,20 @@
         <input type="checkbox" ngModel name="isSubscribed">
       </label>
     </div>
+
+    <!--div.form-group>label[for='contactMethod']+select[id='contactMethod'].from-control-->
+    <div class="form-group">
+      <label for="contactMethod">Contact Method</label>
+      <!--Add multiple prop in select Tag we can make multiple selection-->
+      <select ngModel name="contactMethod" id="contactMethod" class="form-control">
+        <option value="">Select...</option>
+        <!--[ngValue] select entire object-->
+        <!-- <option *ngFor="let method of contactMethods" [ngValue]="method">{{method.name}}</option> -->
+        <option *ngFor="let method of contactMethods" [value]="method.id">{{method.name}}</option>
+      </select>
+    </div>
     <p>
-      {{ f.value | json }}
+      {{ f.value | json   }}
     </p>
     <!--button.btn.btn-primary    //Short for create below Element for HTML-->
     <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
