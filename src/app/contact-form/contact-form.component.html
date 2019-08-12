@@ -52,6 +52,15 @@
       <textarea ngModel name="comment" id="comment" cols="30" rows="10" class="form-control"></textarea>
     </div>
 
+     <!--div.checkbox>label>input[type='checkbox']-->
+    <div class="checkbox">
+      <label >
+        <input type="checkbox" ngModel name="isSubscribed">
+      </label>
+    </div>
+    <p>
+      {{ f.value | json }}
+    </p>
     <!--button.btn.btn-primary    //Short for create below Element for HTML-->
     <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
 </form>
