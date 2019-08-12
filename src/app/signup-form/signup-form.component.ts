@@ -9,6 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class SignupFormComponent implements OnInit {
 
   public form = new FormGroup({
+    // Make different validator in Array- (Array of validation) 
     username: new FormControl('', [
       Validators.required,
       Validators.minLength(3)
