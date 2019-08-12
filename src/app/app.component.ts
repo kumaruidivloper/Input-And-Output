@@ -6,15 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  task = {
-    title: 'Review application',
-    assignee: null
-  }
-
-  taskTwo = {
-    title: 'Review application',
-    assignee: {
-      name: 'Kumar'
-    }
-  }
+  
 }
