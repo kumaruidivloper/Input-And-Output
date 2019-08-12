@@ -1,0 +1,25 @@
+<form>
+    <!--
+      Guid For create Template-Driven Form
+      Template-Driven Form
+      // 1)ngModel
+      // 2) name="[we can use id name here]"
+      // 3) #[idName]="ngModel"
+      // 4) import { FormsModule }   from '@angular/forms'; very importent
+    -->
+
+    <!--label+input[type='text'].form-control   //Short for create below Element for HTML-->
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
+    </div>
+
+    <!--div.form-group>label[for="comment"]+textarea[id='comment'].form-control    //Short for create below Element for HTML-->
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <textarea ngModel name="comment" id="comment" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+
+    <!--button.btn.btn-primary    //Short for create below Element for HTML-->
+    <button class="btn btn-primary">Submit</button>
+</form>
