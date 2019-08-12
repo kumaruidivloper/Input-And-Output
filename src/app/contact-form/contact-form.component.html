@@ -1,4 +1,7 @@
 <form #f="ngForm" (ngSubmit)="submit(f)">
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <!--Group Validation we can achive like below-->
+    <!-- <div *ngIf="!contact.valid">...</div> -->
     <!--
       Guid For create Template-Driven Form
       Template-Driven Form
@@ -8,7 +11,7 @@
       // 4) import { FormsModule }   from '@angular/forms'; very importent
     -->
 
-    <!--label+input[type='text'].form-control   //Short for create below Element for HTML-->
+      <!--label+input[type='text'].form-control   //Short for create below Element for HTML-->
     <div class="form-group">
         <label for="firstName">First Name</label>
         <input 
@@ -41,6 +44,7 @@
           </div>
         </div>
     </div>
+  </div>
 
     <!--div.form-group>label[for="comment"]+textarea[id='comment'].form-control    //Short for create below Element for HTML-->
     <div class="form-group">
