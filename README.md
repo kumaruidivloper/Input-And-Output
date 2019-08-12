@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## FromGroup & FromControl
 ![003-FromGroup FromControl](https://user-images.githubusercontent.com/30646609/62849474-5debe800-bcfd-11e9-91a6-30c99659cb84.JPG)
 
-## Types Of Froms
+## Types Of Froms  
 ![004-Types-Of-Froms](https://user-images.githubusercontent.com/30646609/62849475-5debe800-bcfd-11e9-9164-29b354fdfd26.JPG)
 
 ## Diff Between Reactive Vs Template Driven
