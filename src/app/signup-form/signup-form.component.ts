@@ -10,24 +10,30 @@ import { UsernameValidators } from './username.validators';
 export class SignupFormComponent implements OnInit {
 
   public form = new FormGroup({
-    // Make different validator in Array- (Array of validation) 
-    username: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      UsernameValidators.cannotContainSpace,
-      UsernameValidators.shouldBeUnique
-    ]),
-    password: new FormControl('', Validators.required)
+    account: new FormGroup({
+      username: new FormControl(''),
+      password: new FormControl('')
+    }),
+    companyDetails: new FormGroup({
+      companyName: new FormControl(''),
+      companyAddress: new FormGroup({
+          flatName: new FormControl(''),
+          faltNumber: new FormControl(''),
+          State: new FormControl(''),
+          Country: new FormControl('')
+      })
+    }) 
   });
 
   login () {
-    this.form.setErrors({
-      invalidLogin: true
-    });
+    // this.form.setErrors({
+    //   invalidLogin: true
+    // });
     // let isValid = authService.login(this.form.value);
     // if (!isValid) {
         
     // }
+    console.log(this.form.value);
   }
 
   get username() {
